@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="zh-CN" ng-app="app">
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <title>爬虫管理</title>
+    <link rel="icon" href="/static/img/logo1.jpg">
+
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+    <link href="http://cdn.bootcss.com/bootstrap/3.3.7/css/bootstrap-theme.css" rel="stylesheet">
+    <link href="/static/admin.css" rel="stylesheet">
+
+</head>
+<body ng-controller="admin">
+
+    <nav class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#">爬虫管理</a>
+            </div>
+            <div id="navbar" class="navbar-collapse collapse">
+                <form class="navbar-form navbar-right">
+                    <input type="text" class="form-control" placeholder="搜索">
+                </form>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container-fluid">
+        <div class="row main">
+            <h1 class="page-header">诗</h1>
+
+            <div class="table-responsive">
+                <table class="table table-striped">
+                    <thead>
+                        <tr>
+                            <th>项目</th>
+                            <th>爬虫</th>
+                            <th>IP地址</th>
+                            <th>状态</th>
+                            <th>操作</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr ng-repeat="row in data.rows">
+                            <td>row.Title}}</td>
+                            <td>row.Author}}</td>
+                            <td>row.Period}}</td>
+                            <td>row.Labels}}</td>
+                            <td>row.Doc}}</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+
+    <script src="http://cdn.bootcss.com/angular.js/1.6.3/angular.min.js"></script>
+    <script src="http://cdn.bootcss.com/angular.js/1.6.3/angular-animate.min.js"></script>
+    <script src="http://cdn.bootcss.com/angular.js/1.6.3/angular-route.js"></script>
+    <script src="http://cdn.bootcss.com/angular.js/1.6.3/angular-resource.min.js"></script>
+    <script src="http://cdn.bootcss.com/angular.js/1.6.3/angular-loader.min.js"></script>
+    <script src="/static/admin.js"></script>
+</body>
+</html>
