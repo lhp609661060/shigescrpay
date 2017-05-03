@@ -30,12 +30,6 @@ def stop_spider():
 def restart_spider():
     return jsonify({'status':0})
 
-
-@app.route('/start-spider')
-def start_spider():
-    return jsonify({'status':0})
-
-
 @app.route('/delete-project')
 def delete_project():
     return jsonify({'status':0})
