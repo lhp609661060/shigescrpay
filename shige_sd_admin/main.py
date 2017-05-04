@@ -2,9 +2,10 @@
 
 import json
 
-from flask import Flask
+from flask import Flask, request
 from flask import render_template, jsonify
 app = Flask(__name__)
+
 
 @app.route('/')
 def admin():
@@ -13,6 +14,7 @@ def admin():
 
 @app.route('/search')
 def search():
+    print request.args.get("kw")
     return jsonify({'status':0})
 
 
@@ -29,6 +31,7 @@ def stop_spider():
 @app.route('/restart-spider')
 def restart_spider():
     return jsonify({'status':0})
+
 
 @app.route('/delete-project')
 def delete_project():
